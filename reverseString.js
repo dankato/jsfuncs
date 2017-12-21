@@ -16,8 +16,6 @@ function reverse(string) {
 }
 reverse("esrever"); // 'reverse'
 
-module.exports = reverse;
-
 // Solution 2 (manual)
 
 // steps to solve
@@ -37,3 +35,13 @@ function reverse(string) {
 // for, a temp variable being redeclared for every loop of 'character' of the irreratable object we want to itterate through, the string variable 'string', one by one. Then take that character and add it to the start of the string 'reversed' and return reversed.
 
 reverse("esrever"); // 'reverse'
+
+// Solution 3 (reduce helper)
+
+function reverse(string) {
+  return string.split("").reduce((reversed, character) => {
+    return character + reversed;
+  }, "");
+}
+
+module.exports = reverse;
