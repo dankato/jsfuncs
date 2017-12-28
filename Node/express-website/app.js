@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function(req, res) {
-  res.render("index", { title: "Welcome" });
+  res.render("index", { title: "Welcome person" });
 });
 
 app.get("/about", function(req, res) {
